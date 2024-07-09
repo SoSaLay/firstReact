@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-
+import info from './info.js'
 
 class App extends Component {
 constructor(props){
   super(props)
   this.state={
-    person:{}
+    person:{
+      name:'Sulayman K',
+      dob:'April 15, 5000',
+      phone:'704-704-7044'
+    }
   }
 }
 
@@ -13,10 +17,7 @@ constructor(props){
   render() {
     return (
       <div>
-        <h1>My Basic Information</h1>
-        <p>Name: Sulayman K</p>
-        <p>Phone: 704-704-7044</p>
-        <p>Date of Birth: April 15, 5000</p>
+      <info person ={this.state.person}/>
       </div>
     );
   }
